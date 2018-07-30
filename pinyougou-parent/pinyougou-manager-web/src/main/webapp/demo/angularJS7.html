@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+//  自定义的模块，模块名称是myApp
+ var app = angular.module("myApp",[]);
+//  定义控制器  名称是：myController
+ app.controller("myController",function($scope){
+	 $scope.add = function(){
+		 $scope.c =parseInt( $scope.a) + parseInt($scope.b);
+	 }
+	 $scope.jian = function(){
+		 $scope.c =parseInt( $scope.a) - parseInt($scope.b);
+	 }
+	 
+ })
+
+</script>
+</head>
+
+
+<body ng-app="myApp"  ng-controller="myController">
+ <input  ng-model="a"/>+<input  ng-model="b"/><button ng-click="jian()">等于</button><input  ng-model="c"/>
+</body>
+</html>

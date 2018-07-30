@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="../plugins/angularjs/angular.min.js"></script>
+<script type="text/javascript">
+// $scope 是用于html和js做数据交互的
+
+  function mycontroller($scope){
+// 	  $scope.name="白面郎君";
+      $scope.user={name:"syl",age:18};
+  }
+
+</script>
+
+</head>
+<body ng-app>
+	<div ng-controller="mycontroller">
+	 名称是：  <span>{{user.name}}</span>
+	 </div>
+</body>
+</html>
